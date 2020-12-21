@@ -1,0 +1,39 @@
+<br><br>
+<h4>Результаты по позиции `<%=@search%>`:</h4>
+
+<br><br><table class="table table-striped">
+
+   <thead>
+  		<tr>
+		  	<th>ФИО</th>
+		  	<th>Дата визита</th>
+		  	<th>ФИО пациента</th>
+		</tr>
+   </thead>
+
+	<tbody>
+		<% @visitors_search_by_name.each do |v| %>
+		  <tr>
+		  	<td><%= v.name %></td>
+		  	<td><%= v.visit_datetime %></td>
+		  	<td><%= v.patient_name %></td>
+		  </tr>
+		<% end %>
+
+		<% @visitors_search_by_date.each do |v| %>
+		  <tr>
+		  	<td><%= v.name %></td>
+		  	<td><%= v.visit_datetime %></td>
+		  	<td><%= v.patient_name %></td>
+		  </tr>
+		<% end %>
+
+		<% @visitors_search_by_patients_name.each do |v| %>
+		  <tr>
+		  	<td><%= v.name %></td>
+		  	<td><%= v.visit_datetime %></td>
+		  	<td><%= v.patient_name %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>

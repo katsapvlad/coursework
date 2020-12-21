@@ -1,0 +1,42 @@
+<form action="/information2" method="POST">
+<br><div align="right" class="row" >
+  <div class="col-lg-5">
+    <div class="input-group">
+      <input name = "search" type="text" class="form-control" placeholder="Введите фамилию, диагноз или дату поступления">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="submit">Поиск</button>
+      </span>
+    </div>
+  </div>
+  <a class="btn btn-warning" href="/information2/patients_sort_by_name" role="button">Сортировка по ФИО</a>
+  <a class="btn btn-warning" href="/information2/patients_sort_by_diagnosis" role="button">Сортировка по диагнозу</a>
+  <a class="btn btn-warning" href="/information2/patients_sort_by_date" role="button">Сортировка по дате поступления</a>
+</div>
+</form>
+
+<br><br><table class="table table-striped">
+
+   <thead>
+  		<tr>
+		  	<th>ФИО</th>
+		  	<th>Родился</th>
+		  	<th>Поступил</th>
+		   <th>Диагноз</th>
+		  	<th>Выписан</th>
+		  	<th>Рекомендации</th>
+		</tr>
+   </thead>
+
+	<tbody>
+		<% @patients.each do |p| %>
+		  <tr>
+		  	<td><%= p.name %></td>
+		  	<td><%= p.birthdate %></td>
+		  	<td><%= p.date_of_admission %></td>
+		  	<td><%= p.diagnosis %></td>
+		  	<td><%= p.date_of_discharged %></td>
+		  	<td><%= p.recommendation %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>

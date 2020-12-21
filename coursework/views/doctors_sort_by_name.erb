@@ -1,0 +1,23 @@
+<br><br>
+<h4>Результаты отсортированы в алфавитном порядке по категории "ФИО":</h4>
+
+<br><br><table class="table table-striped">
+
+	<thead>
+		<tr>
+			<th>ФИО</th>
+			<th>Должность</th>
+			<th>Время работы</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @doctors_sort_by_name.each do |d|%>
+		<tr>
+			<td><%= d.name %></td>
+			<td><%= d.position %></td>
+			<td><%= d.worktime %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

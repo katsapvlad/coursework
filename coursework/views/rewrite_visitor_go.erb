@@ -1,0 +1,34 @@
+<br><h1 align="center">Редактирование посетителя</h1><br>
+<div align="center">
+<h4>Вы находитесь в модуле редактирования посетителя.
+<br><br>Пожалуйста, введите новые данные в необходимые поля:
+</h4><br>
+</div>
+<br>
+
+<form action="/rewrite/main/rewrite_visitor/go" method="POST" align="center" class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="name" type="text" class="form-control"  placeholder="ФИО посетителя" value="<%= $visitor.name %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="visit_datetime" type="text" class="form-control"  placeholder="Дата визита" value="<%= $visitor.visit_datetime %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="patient_name" type="text" class="form-control"  placeholder="ФИО пациента" value="<%= $visitor.patient_name %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-4">
+      <br><button type="submit" class="btn btn-success">Редактировать посетителя</button>
+    </div>
+  </div>
+</form><br><br>

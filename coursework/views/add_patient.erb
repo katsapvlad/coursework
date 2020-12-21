@@ -1,0 +1,51 @@
+<br><h1 align="center">Добавление пациента</h1><br>
+<div align="center">
+<h4>Вы находитесь в модуле добавления пациента.
+<br><br>Пожалуйста, заполните поля ниже:
+</h4><br>
+</div>
+<br>
+
+<form action="/add/main/add_patient" method="POST" align="center" class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="patient[name]" type="text" class="form-control"  placeholder="ФИО пациента">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="patient[birthdate]" type="text" class="form-control"  placeholder="Дата рождения">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="patient[date_of_admission]" type="text" class="form-control"  placeholder="Дата поступления">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="patient[diagnosis]" type="text" class="form-control"  placeholder="Диагноз">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="patient[date_of_discharged]" type="text" class="form-control"  placeholder="Дата выписки">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="patient[recommendation]" type="text" class="form-control"  placeholder="Рекоммендации">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-4">
+      <br><button type="submit" class="btn btn-success">Добавить пациента</button>
+    </div>
+  </div>
+</form><br><br>

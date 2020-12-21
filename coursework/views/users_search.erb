@@ -1,0 +1,30 @@
+<br><br>
+<h4>Результаты по позиции `<%=@search%>`:</h4>
+
+<br><br><table class="table table-striped">
+
+	<thead>
+		<tr>
+			<th>Логин</th>
+			<th>Пароль</th>
+			<th>Роль</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @users_search_by_login.each do |u|%>
+		<tr>
+			<td><%= u.login %></td>
+			<td><%= u.password %></td>
+			<td><%= u.role %></td>
+		</tr>
+		<% end %>
+		<% @users_search_by_role.each do |u|%>
+		<tr>
+			<td><%= u.login %></td>
+			<td><%= u.password %></td>
+			<td><%= u.role %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

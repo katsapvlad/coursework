@@ -1,0 +1,34 @@
+<br><h1 align="center">Добавление записи</h1><br>
+<div align="center">
+<h4>Вы находитесь в модуле добавления записи.
+<br><br>Пожалуйста, заполните поля ниже:
+</h4><br>
+</div>
+<br>
+
+<form action="/add_user/main" method="POST" align="center" class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="user[login]" type="text" class="form-control"  placeholder="Логин">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="user[password]" type="text" class="form-control"  placeholder="Пароль">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="user[role]" type="text" class="form-control"  placeholder="Роль">
+    </div>
+  </div>
+<div align="center" class="form-group">
+    <label class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <div class="alert alert-success">Запись успешно добавлена!</div>
+    </div>
+  </div>
+</form><br><br>

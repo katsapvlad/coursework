@@ -1,0 +1,23 @@
+<br><br><h1 align="center">Удаление посетителя</h1><br>
+<div align="center">
+<h4>Вы находитесь в модуле удаления посетителя.
+<br><br>Пожалуйста, введите ФИО посетителя, которого хотите удалить:
+</h4><br>
+</div>
+<br>
+
+<form action="/delete/main/delete_visitor" method="POST" align="center" class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="delete" type="text" class="form-control"  placeholder="ФИО посетителя">
+    </div>
+  </div>
+  <br>
+<div align="center" class="form-group">
+    <label class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <div class="alert alert-danger">Такого пользователя нет!</div>
+    </div>
+  </div>
+</form><br><br>

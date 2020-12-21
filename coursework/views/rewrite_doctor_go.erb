@@ -1,0 +1,34 @@
+<br><h1 align="center">Редактирование врача</h1><br>
+<div align="center">
+<h4>Вы находитесь в модуле редактирования врача.
+<br><br>Пожалуйста, введите новые данные в необходимые поля:
+</h4><br>
+</div>
+<br>
+
+<form action="/rewrite/main/rewrite_doctor/go" method="POST" align="center" class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="name" type="text" class="form-control"  placeholder="ФИО врача" value="<%= $doctor.name %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="position" type="text" class="form-control"  placeholder="Должность" value="<%= $doctor.position %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="worktime" type="text" class="form-control"  placeholder="Время работы" value="<%= $doctor.worktime %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-4">
+      <br><button type="submit" class="btn btn-success">Редактировать врача</button>
+    </div>
+  </div>
+</form><br><br>

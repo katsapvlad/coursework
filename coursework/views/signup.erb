@@ -1,0 +1,26 @@
+<br><br><br><br><h1 align="center">Регистрация</h1><br>
+
+
+<%$login_final=""%>
+<%$role_final=""%>
+<form action="/registrations" method="POST" align="center" class="form-horizontal">
+  <label>Логин и пароль должны иметь минимум 5 символов.<br>Логин должен быть уникальным. При невыполнении этих условий,<br>
+пользователь не может быть зарегистрирован в системе.</label><br><br><br>
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="login" type="text" class="form-control"  placeholder="Введите логин">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="password" type="password" class="form-control"  placeholder="Введите пароль">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-4">
+      <br><button type="submit" class="btn btn-success">Подтвердить</button>
+    </div>
+  </div>
+</form>

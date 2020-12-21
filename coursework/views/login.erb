@@ -1,0 +1,23 @@
+<br><br><br><br><h1 align="center">Авторизация</h1><br>
+
+<%$login_final=""%>
+<%$role_final=""%>
+<form action="/authorization" method="POST" align="center" class="form-horizontal">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="login" type="text" class="form-control"  placeholder="Введите логин">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="password" type="password" class="form-control"  placeholder="Введите пароль">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-4 col-sm-4">
+      <br><button type="submit" class="btn btn-primary">Подтвердить</button>
+    </div>
+  </div>
+</form>

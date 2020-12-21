@@ -1,0 +1,36 @@
+<form action="/information" method="POST">
+<br><div align="right" class="row" >
+  <div class="col-lg-7">
+    <div class="input-group">
+      <input name = "search" type="text" class="form-control" placeholder="Введите фамилию или должность">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="submit">Поиск</button>
+      </span>
+    </div>
+  </div>
+  <a class="btn btn-warning" href="/information/doctors_sort_by_name" role="button">Сортировка по ФИО</a>
+  <a align="right" class="btn btn-warning" href="/information/doctors_sort_by_position" role="button">Сортировка по должности</a>
+</div>
+</form>
+
+
+<br><br><table class="table table-striped">
+
+	<thead>
+		<tr>
+			<th>ФИО</th>
+			<th>Должность</th>
+			<th>Время работы</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @doctors.each do |d|%>
+		<tr>
+			<td><%= d.name %></td>
+			<td><%= d.position %></td>
+			<td><%= d.worktime %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

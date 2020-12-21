@@ -1,0 +1,23 @@
+<br><br>
+<h4>Результаты отсортированы в алфавитном порядке по категории "ФИО":</h4>
+
+<br><br><table class="table table-striped">
+
+   <thead>
+  		<tr>
+		  	<th>ФИО</th>
+		  	<th>Дата визита</th>
+		  	<th>ФИО пациента</th>
+		</tr>
+   </thead>
+
+	<tbody>
+		<% @visitors_sort_by_name.each do |v| %>
+		  <tr>
+		  	<td><%= v.name %></td>
+		  	<td><%= v.visit_datetime %></td>
+		  	<td><%= v.patient_name %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>

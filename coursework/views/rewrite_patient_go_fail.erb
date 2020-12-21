@@ -1,0 +1,52 @@
+<br><h1 align="center">Редактирование пациента</h1><br>
+<div align="center">
+<h4>Вы находитесь в модуле редактирования пациента.
+<br><br>Пожалуйста, введите новые данные в необходимые поля:
+</h4><br>
+</div>
+<br>
+
+<form action="/rewrite/main/rewrite_patient/go" method="POST" align="center" class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="name" type="text" class="form-control"  placeholder="ФИО пациента" value="<%= $patient.name %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="birthdate" type="text" class="form-control"  placeholder="Дата рождения" value="<%= $patient.birthdate %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="date_of_admission" type="text" class="form-control"  placeholder="Дата поступления" value="<%= $patient.date_of_admission %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="diagnosis" type="text" class="form-control"  placeholder="Диагноз" value="<%= $patient.diagnosis %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="date_of_discharged" type="text" class="form-control"  placeholder="Дата выписки" value="<%= $patient.date_of_discharged %>">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <input name="recommendation" type="text" class="form-control"  placeholder="Рекоммендации" value="<%= $patient.recommendation %>">
+    </div>
+  </div>
+<div align="center" class="form-group">
+    <label class="col-sm-4 control-label"></label>
+    <div class="col-sm-4">
+      <div class="alert alert-danger">Проверьте введенные данные!</div>
+    </div>
+  </div>
+</form><br><br>

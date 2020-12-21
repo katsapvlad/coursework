@@ -1,0 +1,36 @@
+<form action="/show_user/main" method="POST">
+<br><div align="right" class="row" >
+  <div class="col-lg-7">
+    <div class="input-group">
+      <input name = "search" type="text" class="form-control" placeholder="Введите логин или роль">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="submit">Поиск</button>
+      </span>
+    </div>
+  </div>
+  <a class="btn btn-warning" href="/show_user/sort_by_login" role="button">Сортировка по логину</a>
+  <a align="right" class="btn btn-warning" href="/show_user/sort_by_role" role="button">Сортировка по роли</a>
+</div>
+</form>
+
+
+<br><br><table class="table table-striped">
+
+	<thead>
+		<tr>
+			<th>Логин</th>
+			<th>Пароль</th>
+			<th>Роль</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @users.each do |u|%>
+		<tr>
+			<td><%= u.login %></td>
+			<td><%= u.password %></td>
+			<td><%= u.role %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

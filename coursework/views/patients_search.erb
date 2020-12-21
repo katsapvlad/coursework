@@ -1,0 +1,51 @@
+<br><br>
+<h4>Результаты по позиции `<%=@search%>`:</h4>
+
+<br><br><table class="table table-striped">
+
+   <thead>
+  		<tr>
+		  	<th>ФИО</th>
+		  	<th>Родился</th>
+		  	<th>Поступил</th>
+		   <th>Диагноз</th>
+		  	<th>Выписан</th>
+		  	<th>Рекомендации</th>
+		</tr>
+   </thead>
+
+	<tbody>
+		<% @patients_search_by_name.each do |p| %>
+		  <tr>
+		  	<td><%= p.name %></td>
+		  	<td><%= p.birthdate %></td>
+		  	<td><%= p.date_of_admission %></td>
+		  	<td><%= p.diagnosis %></td>
+		  	<td><%= p.date_of_discharged %></td>
+		  	<td><%= p.recommendation %></td>
+		  </tr>
+		<% end %>
+
+		<% @patients_search_by_diagnosis.each do |p| %>
+		  <tr>
+		  	<td><%= p.name %></td>
+		  	<td><%= p.birthdate %></td>
+		  	<td><%= p.date_of_admission %></td>
+		  	<td><%= p.diagnosis %></td>
+		  	<td><%= p.date_of_discharged %></td>
+		  	<td><%= p.recommendation %></td>
+		  </tr>
+		<% end %>
+
+		<% @patients_search_by_date.each do |p| %>
+		  <tr>
+		  	<td><%= p.name %></td>
+		  	<td><%= p.birthdate %></td>
+		  	<td><%= p.date_of_admission %></td>
+		  	<td><%= p.diagnosis %></td>
+		  	<td><%= p.date_of_discharged %></td>
+		  	<td><%= p.recommendation %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>

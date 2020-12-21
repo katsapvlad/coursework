@@ -1,0 +1,23 @@
+<br><br>
+<h4>Результаты отсортированы в алфавитном порядке по категории "Роль":</h4>
+
+<br><br><table class="table table-striped">
+
+   <thead>
+  		<tr>
+		  	<th>Логин</th>
+			<th>Пароль</th>
+			<th>Роль</th>
+		</tr>
+   </thead>
+
+	<tbody>
+		<% @users_sort_by_role.each do |u|%>
+		<tr>
+			<td><%= u.login %></td>
+			<td><%= u.password %></td>
+			<td><%= u.role %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

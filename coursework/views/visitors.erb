@@ -1,0 +1,36 @@
+<form action="/information3" method="POST">
+<br><div align="center" class="row" >
+  <div class="col-lg-5">
+    <div class="input-group">
+      <input name = "search" type="text" class="form-control" placeholder="Введите фамилию">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="submit">Поиск</button>
+      </span>
+    </div>
+  </div>
+  <a class="btn btn-warning" href="/information3/visitors_sort_by_name" role="button">Сортировка по ФИО</a>
+  <a class="btn btn-warning" href="/information3/visitors_sort_by_date" role="button">Сортировка по дате визита</a>
+  <a class="btn btn-warning" href="/information3/visitors_sort_by_patients_name" role="button">Сортировка по ФИО пациента</a>
+</div>
+</form>
+
+<br><br><table class="table table-striped">
+
+   <thead>
+  		<tr>
+		  	<th>ФИО</th>
+		  	<th>Дата визита</th>
+		  	<th>ФИО пациента</th>
+		</tr>
+   </thead>
+
+	<tbody>
+		<% @visitors.each do |v| %>
+		  <tr>
+		  	<td><%= v.name %></td>
+		  	<td><%= v.visit_datetime %></td>
+		  	<td><%= v.patient_name %></td>
+		  </tr>
+		<% end %>
+	</tbody>
+</table>
